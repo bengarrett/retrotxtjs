@@ -3,7 +3,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     banner:
-      '<%= pkg.description %> v<%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>); © <%= pkg.author %> - <%= pkg.license %>',
+      '<%= pkg.name %> v<%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>); © <%= pkg.author %> - <%= pkg.license %>',
     dzpath: "/static/retrotxt",
     uglify: {
       options: {
@@ -11,10 +11,10 @@ module.exports = function (grunt) {
       },
       build: {
         files: {
-          "build/js/retrotxt.js": ["js/retrotxt.js"],
-          "build/js/retrotxt-init.js": ["js/retrotxt-init.js"],
-          "build/js/module/charset.js": ["js/module/charset.js"],
-          "build/js/module/text.js": ["js/module/text.js"],
+          "dist/js/retrotxt.js": ["js/retrotxt.js"],
+          "dist/js/retrotxt-init.js": ["js/retrotxt-init.js"],
+          "dist/js/module/charset.js": ["js/module/charset.js"],
+          "dist/js/module/text.js": ["js/module/text.js"],
         },
       },
     },
@@ -24,12 +24,12 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: ["font/amigafonts_v1.02/**"],
-            dest: "build/font",
+            dest: "dist",
           },
           {
             expand: true,
             src: ["font/oldschool_pc_­font_pack_v2.2/**"],
-            dest: "build/font",
+            dest: "dist",
           },
         ],
       },
@@ -38,9 +38,9 @@ module.exports = function (grunt) {
           {
             expand: true,
             src: ["example/**"],
-            dest: "build/",
+            dest: "dist/",
           },
-          { src: "example*.html", dest: "build/" },
+          { src: "example*.html", dest: "dist/" },
         ],
       },
     },
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
         files: [
           {
             src: ["css/retrotxt.css"],
-            dest: "build/css/retrotxt.css",
+            dest: "dist/css/retrotxt.css",
           },
         ],
       },
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
           linebreak: true,
         },
         files: {
-          src: ["build/css/retrotxt.css"],
+          src: ["dist/css/retrotxt.css"],
         },
       },
     },
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
       examples: {
         options: {
           port: 8002,
-          base: ["build"],
+          base: ["dist"],
           open: {
             target: "http://localhost:8002/example1.html",
           },
@@ -110,13 +110,13 @@ module.exports = function (grunt) {
     },
     clean: {
       build: {
-        src: ["build"],
+        src: ["dist"],
       },
     },
     replace: {
       init: {
-        src: ["build/js/retrotxt-init.js"],
-        dest: ["build/js/retrotxt-init.js"],
+        src: ["dist/js/retrotxt-init.js"],
+        dest: ["dist/js/retrotxt-init.js"],
         replacements: [
           {
             from: 'src="/js/retrotxt.js"',
@@ -125,8 +125,8 @@ module.exports = function (grunt) {
         ],
       },
       css: {
-        src: ["build/js/retrotxt.js"],
-        dest: ["build/js/retrotxt.js"],
+        src: ["dist/js/retrotxt.js"],
+        dest: ["dist/js/retrotxt.js"],
         replacements: [
           {
             from: '"../css/retrotxt.css"',

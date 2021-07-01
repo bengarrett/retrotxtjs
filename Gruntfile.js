@@ -23,24 +23,26 @@ module.exports = function (grunt) {
         files: [
           {
             expand: true,
-            src: ["font/amigafonts_v1.02/**"],
-            dest: "dist",
+            flatten: true,
+            src: ["font/amigafonts_v1.02/*"],
+            dest: "dist/font/amiga/",
           },
           {
             expand: true,
-            src: ["font/oldschool_pc_­font_pack_v2.2/**"],
-            dest: "dist",
+            flatten: true,
+            src: ["font/oldschool_pc_­font_pack_v2.2/*"],
+            dest: "dist/font/pc/",
           },
         ],
       },
-      examples: {
+      example: {
         files: [
           {
             expand: true,
-            src: ["example/**"],
+            flatten: true,
+            src: ["example/*"],
             dest: "dist/",
           },
-          { src: "example*.html", dest: "dist/" },
         ],
       },
     },
@@ -97,16 +99,6 @@ module.exports = function (grunt) {
           base: ".",
         },
       },
-      examples: {
-        options: {
-          port: 8002,
-          base: ["dist"],
-          open: {
-            target: "http://localhost:8002/example1.html",
-          },
-          keepalive: true,
-        },
-      },
     },
     clean: {
       build: {
@@ -154,6 +146,7 @@ module.exports = function (grunt) {
     "clean",
     "uglify",
     "copy:main",
+    "copy:example",
     "cssmin",
     "usebanner",
   ]);
@@ -163,13 +156,6 @@ module.exports = function (grunt) {
 
   // JS unit tests.
   grunt.registerTask("test", ["connect:server", "qunit"]);
-
-  // Run the examples files in a browser with the build code.
-  grunt.registerTask("example", [
-    "default",
-    "copy:examples",
-    "connect:examples",
-  ]);
 
   // Deploy for Demozoo.
   grunt.registerTask("deploy", ["default", "replace:init", "replace:css"]);

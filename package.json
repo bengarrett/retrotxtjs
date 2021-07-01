@@ -2,9 +2,29 @@
   "name": "retrotxt",
   "version": "0.1.0",
   "description": "RetrotxtJS turns legacy ASCII and NFO text into in-browser HTML.",
+  "keywords": [
+    "html",
+    "ascii",
+    "nfo",
+    "cp437",
+    "iso8859",
+    "text",
+    "textfile"
+  ],
+  "homepage": "https://github.com/bengarrett/retrotxtjs",
+  "bugs": {
+    "url": "https://github.com/bengarrett/retrotxtjs/issues"
+  },
   "license": "LGPL-3.0",
   "author": "Ben Garrett",
-  "homepage": "https://github.com/bengarrett/retrotxtjs",
+  "files": [
+    "dist/**"
+  ],
+  "main": "js/retrotxt-init.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bengarrett/retrotxtjs.git"
+  },
   "devDependencies": {
     "eslint": "*",
     "eslint-config-prettier": "*",
@@ -28,8 +48,7 @@
     "stylelint-config-standard": "*",
     "stylelint-order": "*"
   },
-  "private": true,
   "scripts": {
-    "serve": "npx http-server . --cors --port 8003"
+    "serve": "npx http-server dist --cors --port 8003"
   }
 }

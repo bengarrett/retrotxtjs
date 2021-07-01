@@ -4,6 +4,51 @@ RetrotxtJS turns legacy ASCII and NFO text into in-browser HTML.
 
 ## Install and usage
 
+```bash
+yarn add retrotxt
+```
+
+After installation you can add RetrotxtJS to an existing page with a.
+
+Add a unique ``id to the`<pre>` element you wish to apply.
+
+Append a `<script>` element to the end of the page's `<html>` element.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <pre>
+ ·                 ·
+ │ This is my page │
+ ·                 ·
+    </pre>
+  </body>
+</html>
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <pre id="retrotxtCanvas">
+ ·                 ·
+ │ This is my page │
+ ·                 ·
+    </pre>
+  </body>
+  <script defer src="">
+</html>
+```
+
 ## Examples
 
 ## Build
@@ -15,6 +60,12 @@ cd retrotxtjs
 
 # Install dependencies.
 yarn # or npm install
+
+# Build the RetrotxtJS package.
+grunt
+
+# The built files are found in.
+cd build
 ```
 
 ## License
@@ -31,7 +82,7 @@ Multi Platform Fonts uses a [GNU General Public License Font Exception (GPL+FE)]
 
 ## Credits
 
-RetroTxt by [Ben Garrett](https://devtidbits.com/ben-garrett), [📧](mailto:code.by.ben@gmail.com).
+RetrotxtJS by [Ben Garrett](https://devtidbits.com/ben-garrett), [📧](mailto:code.by.ben@gmail.com).
 
 - `IBM_VGA_8x16` font [by Viler](https://int10h.org/oldschool-pc-fonts).
 - `TopazPlus_a1200` font [by TrueSchool Ascii](https://github.com/rewtnull/amigafonts).

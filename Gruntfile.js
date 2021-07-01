@@ -20,13 +20,24 @@ module.exports = function (grunt) {
     },
     copy: {
       main: {
-        files: [{ expand: true, src: ["font/**"], dest: "build/" }],
+        files: [
+          {
+            expand: true,
+            src: ["font/amigafonts_v1.02/**"],
+            dest: "build/font",
+          },
+          {
+            expand: true,
+            src: ["font/oldschool_pc_­font_pack_v2.2/**"],
+            dest: "build/font",
+          },
+        ],
       },
       examples: {
         files: [
           {
             expand: true,
-            src: ["Text ad for Street Spydrs RAZOR.WHQ - Demozoo_files/**"],
+            src: ["example/**"],
             dest: "build/",
           },
           { src: "example*.html", dest: "build/" },

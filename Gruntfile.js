@@ -4,7 +4,6 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON("package.json"),
     banner:
       '<%= pkg.name %> v<%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>); © <%= pkg.author %> - <%= pkg.license %>',
-    dzpath: "/static/retrotxt",
     uglify: {
       options: {
         footer: "\n/*! <%= banner %> */\n",
@@ -105,28 +104,6 @@ module.exports = function (grunt) {
         src: ["dist"],
       },
     },
-    replace: {
-      init: {
-        src: ["dist/js/retrotxt-init.js"],
-        dest: ["dist/js/retrotxt-init.js"],
-        replacements: [
-          {
-            from: 'src="/js/retrotxt.js"',
-            to: 'src="<%= dzpath %>/js/retrotxt.js"',
-          },
-        ],
-      },
-      css: {
-        src: ["dist/js/retrotxt.js"],
-        dest: ["dist/js/retrotxt.js"],
-        replacements: [
-          {
-            from: '"../css/retrotxt.css"',
-            to: '"<%= dzpath %>/css/retrotxt.css"',
-          },
-        ],
-      },
-    },
   });
 
   // Load the plugin that provides the tasks.
@@ -139,7 +116,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-stylelint");
   grunt.loadNpmTasks("grunt-banner");
   grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-text-replace");
 
   // Default task(s).
   grunt.registerTask("default", [
@@ -156,7 +132,4 @@ module.exports = function (grunt) {
 
   // JS unit tests.
   grunt.registerTask("test", ["connect:server", "qunit"]);
-
-  // Deploy for Demozoo.
-  grunt.registerTask("deploy", ["default", "replace:init", "replace:css"]);
 };

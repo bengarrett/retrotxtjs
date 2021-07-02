@@ -5,7 +5,8 @@
 
 @font-face {
   font-family: "topazplusa1200";
-  src: url("../font/amiga/TopazPlus_a1200.ttf") format("ttf"),
+  src:
+    url("../font/amiga/TopazPlus_a1200.ttf") format("ttf"),
     url("../font/amiga/TopazPlus_a1200.woff") format("woff"),
     url("../font/amiga/TopazPlus_a1200.woff2") format("woff2");
   font-display: var(--display);
@@ -19,7 +20,8 @@
 
 @font-face {
   font-family: "ibm_vga_8x16";
-  src: url("../font/pc/Mx437_IBM_VGA_8x16.ttf") format("ttf"),
+  src:
+    url("../font/pc/Mx437_IBM_VGA_8x16.ttf") format("ttf"),
     url("../font/pc/WebPlus_IBM_VGA_8x16.woff") format("woff"),
     url("../font/pc/WebPlus_IBM_VGA_8x16.woff2") format("woff2");
   font-display: var(--display);

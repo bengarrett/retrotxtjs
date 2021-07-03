@@ -28,7 +28,7 @@ npm install retrotxt
 
 To use RetrotxtJS,
 
-- Copy the content of `dist/` to the webroot of your site.
+- Copy the `css/`, `font/`, `js/` directories within `dist/` to the webroot of your site.
 - The element containing the [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxtCanvas` id attribute.
 - Insert the RetrotxtJS initialization script at the end of the page.
 

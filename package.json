@@ -1,6 +1,6 @@
 {
   "name": "retrotxt",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "RetrotxtJS correctly displays legacy ASCII and NFO text on a modern UTF-8 HTML page.",
   "keywords": [
     "html",

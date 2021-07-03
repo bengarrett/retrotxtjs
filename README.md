@@ -28,7 +28,7 @@ npm install retrotxt
 
 To use RetrotxtJS,
 
-- Copy the content of `dist/` to the webroot of your site.
+- Copy the `css/`, `font/`, `js/` directories within `dist/` to the webroot of your site.
 - The element containing the [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxtCanvas` id attribute.
 - Insert the RetrotxtJS initialization script at the end of the page.
 
@@ -104,15 +104,36 @@ npm run-script serve
 #  http://127.0.0.1:8087
 ```
 
+## Defaults
+
+The default <em>View text as:</em> button used by RetrotxtJS is Unicode.
+You may wish to change this on a per-page basis by assigning a class value to the `retrotxtCanvas` element.
+
+#### Unicode
+
+```html
+<pre id="retrotxtCanvas"></pre>
+```
+
+#### MS-DOS
+
+```html
+<pre id="retrotxtCanvas" class="retrotxt-msdos"></pre>
+```
+
+#### Amiga
+
+```html
+<pre id="retrotxtCanvas" class="retrotxt-amiga"></pre>
+```
+
+#### Windows
+
+```html
+<pre id="retrotxtCanvas" class="retrotxt-windows"></pre>
+```
+
 ## Technical
-
-#### Browser support
-
-RetrotxtJS requires a modern browser that supports [ES6 modules]() and the [element.append()]() method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script feature tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
-
-#### Web server requirement
-
-RetrotxtJS uses ES6 modules that cannot be run locally in a browser due to their security requirements, such as using the `file:///` protocol. Otherwise, the browser will throw CORS errors and abort the scripts.
 
 #### RetrotxtJS location
 
@@ -123,18 +144,28 @@ However, you may place these directories (`css/`, `font/`, `js/`) in any subdire
 <script defer src="/lib/retrotxt/js/retrotxt-init.js">
 ```
 
-#### Character encoding limitations
+#### Browser support
 
-The CP-437 and Windows-1252 character tables support are incomplete due to a limitation of Unicode.
-The HTML standard never supported CP-437 and abandoned Windows-1252 support after HTML v4.
+RetrotxtJS requires a modern browser that supports [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and the [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append) method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script feature tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
 
-Unicode (and thus UTF-8) is backwardly compatible with [ASCII (Basic Latin)](https://unicode.org/charts/PDF/U0000.pdf), [ISO-8859-1 (Latin-1 Supplement)](https://unicode.org/charts/PDF/U0080.pdf) but not with CP-437 or Windows-1252.
+#### Web server requirement
 
-A few code points that CP-437 and Windows-1252 use are left empty by the Unicode standard, meaning they will not display on a UTF-8 encoded web page or document.
+RetrotxtJS uses ES6 modules that cannot be run locally in a browser due to their security requirements. Otherwise, the browser will throw CORS errors and abort the scripts.
 
-- `0080` in use by the Ç character in CP-437 and the € symbol in Windows-1252.
-- `0081` in use the ü character in CP-437.
-- `0099` in use the Ö character in CP-437 and the ™ symbol in Windows-1252.
+#### Character and encoding limitations
+
+RetrotxtJS assumes your webserver loads any CP-437 preformatted text as Windows-1252. That may not be the case on some configurations, and RetrotxtJS may not work correctly.
+
+Unicode (and thus UTF-8) is backwardly compatible with [ASCII (Basic Latin)](https://unicode.org/charts/PDF/U0000.pdf), [ISO-8859-1 (Latin-1 Supplement)](https://unicode.org/charts/PDF/U0080.pdf) but not with CP-437.
+
+A few code points that CP-437 uses for display characters are control characters in most other situations.
+
+- `0009` in use by the ○ character is in use as a `\t` horizontal tab control.
+- `000A` in use by the ◙ character is in use as a `\n` newline line feed.
+- `000D` in use by the ♪ character is in use as a `\r` newline carriage return.
+
+* `001B` in use by the ← character is displayed in RetrotxtJS and the escape control used by ANSI text.
+* `001A` in use by the → character is sometimes an MS-DOS [End-of-file marker](https://en.wikipedia.org/wiki/End-of-file).
 
 ## License
 
@@ -161,7 +192,7 @@ RetrotxtJS by [Ben Garrett](https://devtidbits.com/ben-garrett) &nbsp; [📧](ma
 
 #### CP-437
 
-IBM created it for their 1981 IBM-PC to allow English-speaking developers to develop text-based programs with keyboard interfaces. Today it is still used by digital artists who create text and colored ANSI art, but otherwise, it is unsupported.
+IBM created it for their 1981 IBM-PC to allow English-speaking developers to develop text-based programs with keyboard interfaces. Today it is still used by digital artists who [create text and colored ANSI art](https://16colo.rs/), but otherwise, it is unsupported.
 
 #### ISO-8895-1
 
@@ -173,9 +204,9 @@ Microsoft's take on ISO-8895-1, whereby they broke it by inserting several new c
 
 #### Unicode
 
-Legacy character encodings were mostly 8-bit with a fixed set of 256 or fewer characters. A computer could only display the characters and symbols included in the chosen code page. If an author wrote on a machine set to CP-437 and wanted to show the $ dollar, € euro, and ₽ ruble symbols in the same document, they couldn't due to the lack of glyphs.
+Legacy character encodings were mostly 8-bit with a fixed set of 256 or fewer characters. A computer could only display the characters and symbols included in the chosen code page. If an author wrote on a machine set to CP-437 and wanted to show the $ dollar, € euro, and ₽ ruble symbols in the same document, they couldn't due to the lack of available glyphs.
 
-Unicode overcomes these limitations by assigning each known glyph, symbol, or character a unique numeric identifier, known as a codepoint, that wouldn't conflict with any other.
+Unicode overcomes these limitations by assigning each known glyph, symbol, or character a unique, non-conflicting numeric identifier, known as a codepoint, that is always accessible.
 
 #### UTF-8
 

@@ -149,9 +149,58 @@ export class LegacyText {
       offset = 128;
     if (number >= nbsp && number <= ÿ)
       return this.extendedTable[number - offset];
+    // check for unique Windows 1252 characters
+    const win1252 = this._lookupRows8_9(number);
+    if (win1252 !== ``) return win1252;
     // assume any values higher than 0xFF (255) are Unicode values
     return ``;
   }
+
+  /**
+   * A lookup for extended characters using Windows 1252 in rows eight and nine.
+   * @param {*} number Hex or decimal character code
+   * @returns {string} Unicode symbol
+   */
+  _lookupRows8_9(number) {
+    const chrs = [
+      `€`,
+      ``,
+      `‚`,
+      `ƒ`,
+      `„`,
+      `…`,
+      `†`,
+      `‡`,
+      `ˆ`,
+      `‰`,
+      `Š`,
+      `‹`,
+      `Œ`,
+      ``,
+      `Ž`,
+      ``,
+      ``,
+      `‘`,
+      `’`,
+      `“`,
+      `”`,
+      `•`,
+      `–`,
+      `—`,
+      `\u02dc`,
+      `™`,
+      `š`,
+      `›`,
+      `œ`,
+      ``,
+      `ž`,
+      `Ÿ`,
+    ];
+    const i = chrs.indexOf(String.fromCodePoint(number));
+    if (i === -1) return `${this.extendedTable[number - 128]}`;
+    return `${this.extendedTable[i]}`;
+  }
+
   /**
    * A lookup for extended characters.
    * @param {*} number Hex or decimal character code

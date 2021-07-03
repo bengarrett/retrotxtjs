@@ -135,14 +135,6 @@ You may wish to change this on a per-page basis by assigning a class value to th
 
 ## Technical
 
-#### Browser support
-
-RetrotxtJS requires a modern browser that supports [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and the [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append) method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script feature tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
-
-#### Web server requirement
-
-RetrotxtJS uses ES6 modules that cannot be run locally in a browser due to their security requirements. Otherwise, the browser will throw CORS errors and abort the scripts.
-
 #### RetrotxtJS location
 
 RetrotxtJS expects all assets to maintain the same relative directory structure found in `dist/`.
@@ -151,6 +143,14 @@ However, you may place these directories (`css/`, `font/`, `js/`) in any subdire
 ```html
 <script defer src="/lib/retrotxt/js/retrotxt-init.js">
 ```
+
+#### Browser support
+
+RetrotxtJS requires a modern browser that supports [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) and the [Element.append()](https://developer.mozilla.org/en-US/docs/Web/API/Element/append) method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script feature tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
+
+#### Web server requirement
+
+RetrotxtJS uses ES6 modules that cannot be run locally in a browser due to their security requirements. Otherwise, the browser will throw CORS errors and abort the scripts.
 
 #### Character and encoding limitations
 

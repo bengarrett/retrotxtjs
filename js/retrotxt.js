@@ -152,6 +152,8 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
         p.removeChild(p.firstChild);
       }
       const cp = codePage();
+      // As a favor, please keep these credits.
+      // Also, the VGA fonts (CC) license requires attribution.
       switch (id) {
         case optUni:
           p.append(unbsp);
@@ -169,7 +171,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
           throw new Error(`Unknown active info ID: "${id}"`);
       }
       const rt = document.createElement(`a`);
-      rt.setAttribute(`href`, `https://retrotxt.com`);
+      rt.setAttribute(`href`, `https://github.com/bengarrett/retrotxtjs`);
       rt.append(`RetroTxt`);
       p.append(cp, ` encoding; `, font, `, code: `, rt, `.`);
     }

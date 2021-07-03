@@ -4,9 +4,17 @@ RetrotxtJS correctly displays legacy ASCII and NFO text on a modern UTF-8 HTML p
 
 ## What does it do?
 
-- Rerenders text encoded in legacy ISO-8859-1 <small>latin1</small>, CP-437 <small>US-ASCII</small>, or Windows-1252 but incorrectly display on UTF-8 <small>Unicode</small> webpages.
+- On UTF-8 <small>Unicode</small> webpages, it rerenders preformatted text encoded in legacy ISO-8859-1 <small>latin1</small>, CP-437 <small>US-ASCII</small>, or Windows-1252 that incorrectly display.
 - It applies historically accurate, monospaced fonts to the text.
 - Optionally wraps preformatted text that lacks line breaks.
+
+#### CP-437 preformatted text when viewed on a UTF-8 page
+
+![Retrotxt text logo in a pre element](screens/readme-0.png)
+
+#### CP-437 text viewed with RetrotxtJS
+
+![Retrotxt text logo with RetrotxtJS](screens/readme-1.png)
 
 ## Install
 
@@ -21,7 +29,7 @@ npm install retrotxt
 To use RetrotxtJS,
 
 - Copy the content of `dist/` to the webroot of your site.
-- The element containing the plain, [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxtCanvas` id attribute.
+- The element containing the [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxtCanvas` id attribute.
 - Insert the RetrotxtJS initialization script at the end of the page.
 
 #### Example page
@@ -54,7 +62,7 @@ To use RetrotxtJS,
 #### Insert the initialization script
 
 ```html
-    <script defer src="/js/retrotxt-init.js">
+    <script defer src="/js/retrotxt-init.js"></script>
   </body>
 </html>
 ```
@@ -74,20 +82,22 @@ To use RetrotxtJS,
         world.
     </pre>
   </body>
-  <script defer src="/js/retrotxt-init.js">
+  <script defer src="/js/retrotxt-init.js"></script>
 </html>
 ```
 
 RetrotxtJS uses ES6 modules, [so it requires a webserver](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_standard_scripts).
 
+![Hello world example with RetrotxtJS](screens/readme-2.png)
+
 ## Examples
 
-There is a collection of example HTML files with different preformatted text that you can view in the browser.
+There is a collection of example HTML files with several preformatted texts that you can view in the browser.
 
 ```bash
 yarn run serve
 # or
-npm run serve
+npm run-script serve
 
 # Starting up http-server, serving dist
 # Available on:
@@ -98,7 +108,7 @@ npm run serve
 
 #### Browser support
 
-RetrotxtJS requires a modern browser that supports [ES6 modules]() and the [element.append()]() method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
+RetrotxtJS requires a modern browser that supports [ES6 modules]() and the [element.append()]() method. Before loading any heavy assets such as the fonts or primary scripts, the initialization script feature tests the browser using legacy JS. It will gracefully exit if the browser is not suitable.
 
 #### Web server requirement
 
@@ -132,7 +142,7 @@ A few code points that CP-437 and Windows-1252 use are left empty by the Unicode
 
 RetrotxtJS uses a [GNU Lesser General Public License v3.0](https://choosealicense.com/licenses/lgpl-3.0).
 
-**This license does not cover the included fonts.**.
+**This license does not cover the included fonts.**
 
 The Ultimate Oldschool PC Font Pack v2.2 uses an [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license ([tldr](https://int10h.org/oldschool-pc-fonts/readme/#legal_stuff)).
 
@@ -140,7 +150,7 @@ Multi-Platform Fonts uses a [GNU General Public License Font Exception (GPL+FE)]
 
 ## Credits
 
-RetrotxtJS by [Ben Garrett](https://devtidbits.com/ben-garrett), [📧](mailto:code.by.ben@gmail.com).
+RetrotxtJS by [Ben Garrett](https://devtidbits.com/ben-garrett) &nbsp; [📧](mailto:code.by.ben@gmail.com).
 
 - `IBM_VGA_8x16` font [by Viler](https://int10h.org/oldschool-pc-fonts).
 - `TopazPlus_a1200` font [by TrueSchool Ascii](https://github.com/rewtnull/amigafonts).
@@ -159,11 +169,11 @@ It was introduced in 1987 as an official international standard, adopted by Unix
 
 #### Windows-1252
 
-Microsoft's take on ISO-8895-1, whereby they broke it by inserting several new characters with Windows 3.1 and 95 that could only be viewed on computers running Windows. Windows-1252 did become a valid HTML page encoding, but its usage was “problematic”.
+Microsoft's take on ISO-8895-1, whereby they broke it by inserting several new characters with Windows 3.1 and 95 that could only be viewed on computers running Windows. Windows-1252 did become a valid HTML page encoding, but its "usage" was “problematic”.
 
 #### Unicode
 
-Legacy character encodings were mostly 8-bit with a fixed set of 256 or fewer characters. A computer could only display the characters and symbols included in the chosen code page. If an author wrote on a machine set to CP-437 and wanted to show the $ dollar, € euro, and ₽ ruble symbols in the same document, they couldn't work due to the missing glyphs in the code page.
+Legacy character encodings were mostly 8-bit with a fixed set of 256 or fewer characters. A computer could only display the characters and symbols included in the chosen code page. If an author wrote on a machine set to CP-437 and wanted to show the $ dollar, € euro, and ₽ ruble symbols in the same document, they couldn't due to the lack of glyphs.
 
 Unicode overcomes these limitations by assigning each known glyph, symbol, or character a unique numeric identifier, known as a codepoint, that wouldn't conflict with any other.
 

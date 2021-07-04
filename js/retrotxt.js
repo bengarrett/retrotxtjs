@@ -1,9 +1,7 @@
 /**
- * RetroTxt for Demozoo
- * Proof of concept
+ * RetroTxtJS
+ * js/retrotxt.js
  * © Ben Garrett, code.by.ben@gmail.com
- *
- * This should be deferred and loaded below the footer of any HTML pages.
  */
 import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
 

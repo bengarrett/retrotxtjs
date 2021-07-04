@@ -1,3 +1,8 @@
+/**
+ * RetroTxtJS
+ * js/module/charset.js
+ * © Ben Garrett, code.by.ben@gmail.com
+ */
 // IBM PC/MS-DOS control codes
 export const DOS437Ctrls = `cp437_C0`;
 // IBM PC/MS-DOS English legacy text

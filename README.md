@@ -138,7 +138,7 @@ You may wish to change this on a per-page basis by assigning a class value to th
 #### RetrotxtJS location
 
 RetrotxtJS expects all assets to maintain the same relative directory structure found in `dist/`.
-However, you may place these directories (`css/`, `font/`, `js/`) in any subdirectory you wish. So instead of putting these directories in the webserver root, you could store them in the subdirectory `lib/retrotxt/` and update the script element as so:
+However, you may place these directories (`css/`, `font/`, `js/`) in any subdirectory you wish. So instead of putting these in the webserver root, you could store them in the subdirectory `/lib/retrotxt/` and update the script element as so:
 
 ```html
 <script defer src="/lib/retrotxt/js/retrotxt-init.js">
@@ -154,18 +154,18 @@ RetrotxtJS uses ES6 modules that cannot be run locally in a browser due to their
 
 #### Character and encoding limitations
 
-RetrotxtJS assumes your webserver loads any CP-437 preformatted text as Windows-1252. That may not be the case on some configurations, and RetrotxtJS may not work correctly.
+RetrotxtJS assumes your webserver loads any CP-437 preformatted text as Windows-1252. That may not be the case on some server configurations, and RetrotxtJS will not work correctly.
 
 Unicode (and thus UTF-8) is backwardly compatible with [ASCII (Basic Latin)](https://unicode.org/charts/PDF/U0000.pdf), [ISO-8859-1 (Latin-1 Supplement)](https://unicode.org/charts/PDF/U0080.pdf) but not with CP-437.
 
 A few code points that CP-437 uses for display characters are control characters in most other situations.
 
-- `0009` in use by the ○ character is in use as a `\t` horizontal tab control.
-- `000A` in use by the ◙ character is in use as a `\n` newline line feed.
-- `000D` in use by the ♪ character is in use as a `\r` newline carriage return.
+- `0009` in use by the ○ character is a `\t` horizontal tab control.
+- `000A` in use by the ◙ character is a `\n` newline line feed.
+- `000D` in use by the ♪ character is a `\r` newline carriage return.
 
-* `001B` in use by the ← character is displayed in RetrotxtJS and the escape control used by ANSI text.
-* `001A` in use by the → character is sometimes an MS-DOS [End-of-file marker](https://en.wikipedia.org/wiki/End-of-file).
+* `001B` is displayed as the ← character but is the escape control used by ANSI text.
+* `001A` is displayed as the → character but is sometimes an MS-DOS [End-of-file marker](https://en.wikipedia.org/wiki/End-of-file).
 
 ## License
 
@@ -194,13 +194,13 @@ RetrotxtJS by [Ben Garrett](https://devtidbits.com/ben-garrett) &nbsp; [📧](ma
 
 IBM created it for their 1981 IBM-PC to allow English-speaking developers to develop text-based programs with keyboard interfaces. Today it is still used by digital artists who [create text and colored ANSI art](https://16colo.rs/), but otherwise, it is unsupported.
 
-#### ISO-8895-1
+#### ISO-8859-1
 
 It was introduced in 1987 as an official international standard, adopted by Unix, Linux, the Commodore Amiga, and much of the world-wide-web in its early years.
 
 #### Windows-1252
 
-Microsoft's take on ISO-8895-1, whereby they broke it by inserting several new characters with Windows 3.1 and 95 that could only be viewed on computers running Windows. Windows-1252 did become a valid HTML page encoding, but its "usage" was “problematic”.
+Microsoft's take on ISO-8859-1, whereby they broke it by inserting several new characters with Windows 3.1 and 95 that could only be viewed on computers running Windows. Windows-1252 did become a valid HTML page encoding, but its "usage" was “problematic”.
 
 #### Unicode
 
@@ -211,3 +211,19 @@ Unicode overcomes these limitations by assigning each known glyph, symbol, or ch
 #### UTF-8
 
 It is an 8-bit implementation of Unicode that is now the default encoding for most operating systems, HTML, and this document.
+
+### Alt-codes
+
+Alt-codes are a common method to insert extended characters and legacy control codes into a document using their hexadecimal or decimal code point.
+
+#### Windows
+
+Hold <kbd>Alt</kbd> and enter the decimal code point using the numeric keypad.
+
+#### Linux
+
+<kbd>Shift+Ctrl+U</kbd> and enter the Unicode code point.
+
+#### macOS
+
+Hold <kbd>⌥</kbd> (option key) and enter the Unicode hexadecimal code point.

@@ -1,3 +1,8 @@
+/**
+ * RetroTxtJS
+ * js/module/text.js
+ * © Ben Garrett, code.by.ben@gmail.com
+ */
 import {
   CharacterSet,
   DOS437Ctrls,
@@ -31,6 +36,7 @@ export class LegacyText {
     this.displayControls = `${options.displayControls}` || `false`;
     this.asciiTable = [];
     this.extendedTable = [];
+    this.win1252Table = [];
   }
   /**
    * Transcode text derived from a character set into Unicode characters that
@@ -56,6 +62,8 @@ export class LegacyText {
     // extended character tables
     const table = new CharacterSet(`${this.codepage}`);
     this.extendedTable = table.get();
+    if (this.codepage === DOS437En)
+      this.win1252Table = new CharacterSet(DOS437En)._cp1252Table();
   }
   /**
    * Looks up a character code and returns an equivalent Unicode symbol.
@@ -151,9 +159,10 @@ export class LegacyText {
       return this.extendedTable[number - offset];
     // check for unique Windows 1252 characters
     const win1252 = this._lookupRows8_9(number);
-    if (win1252 !== ``) return win1252;
-    // assume any values higher than 0xFF (255) are Unicode values
-    return ``;
+    // assume any values higher than 0xFF (255) are Unicode values that are ignored
+    if ([``, `undefined`].includes(win1252)) return ``;
+    // return match character
+    return win1252;
   }
 
   /**
@@ -162,42 +171,9 @@ export class LegacyText {
    * @returns {string} Unicode symbol
    */
   _lookupRows8_9(number) {
-    const chrs = [
-      `€`,
-      ``,
-      `‚`,
-      `ƒ`,
-      `„`,
-      `…`,
-      `†`,
-      `‡`,
-      `ˆ`,
-      `‰`,
-      `Š`,
-      `‹`,
-      `Œ`,
-      ``,
-      `Ž`,
-      ``,
-      ``,
-      `‘`,
-      `’`,
-      `“`,
-      `”`,
-      `•`,
-      `–`,
-      `—`,
-      `\u02dc`,
-      `™`,
-      `š`,
-      `›`,
-      `œ`,
-      ``,
-      `ž`,
-      `Ÿ`,
-    ];
-    const i = chrs.indexOf(String.fromCodePoint(number));
-    if (i === -1) return `${this.extendedTable[number - 128]}`;
+    const i = this.win1252Table.indexOf(String.fromCodePoint(number)),
+      offset = 128;
+    if (i === -1) return `${this.extendedTable[number - offset]}`;
     return `${this.extendedTable[i]}`;
   }
 

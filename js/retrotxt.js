@@ -254,7 +254,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
     c.msdos(),
     c.amiga(),
     c.win9x(),
-    c.wrap()
+    c.wrap(),
   );
   parent.insertBefore(ui, pre);
 

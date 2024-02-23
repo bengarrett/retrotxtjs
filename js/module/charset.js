@@ -75,7 +75,7 @@ export class CharacterSet {
       this.setC,
       this.setD,
       this.setE,
-      this.setF
+      this.setF,
     );
   }
   /**

@@ -29,7 +29,7 @@ npm install retrotxt
 To use RetrotxtJS,
 
 - Copy the `css/`, `font/`, `js/` directories within `dist/` to the webroot of your site.
-- The element containing the [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxtCanvas` id attribute.
+- The element containing the [preformatted text](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre) will require a `retrotxt-canvas` id attribute.
 - Insert the RetrotxtJS initialization script at the end of the page.
 
 #### Example page
@@ -53,7 +53,7 @@ To use RetrotxtJS,
 #### Apply the ID attribute
 
 ```html
-<pre id="retrotxtCanvas">
+<pre id="retrotxt-canvas">
     Hello
     world.
 </pre>
@@ -77,7 +77,7 @@ To use RetrotxtJS,
     <title>Example</title>
   </head>
   <body>
-    <pre id="retrotxtCanvas">
+    <pre id="retrotxt-canvas">
         Hello
         world.
     </pre>
@@ -107,30 +107,30 @@ npm run-script serve
 ## Defaults
 
 The default <em>View text as:</em> button used by RetrotxtJS is Unicode.
-You may wish to change this on a per-page basis by assigning a class value to the `retrotxtCanvas` element.
+You may wish to change this on a per-page basis by assigning a class value to the `retrotxt-canvas` element.
 
 #### Unicode
 
 ```html
-<pre id="retrotxtCanvas"></pre>
+<pre id="retrotxt-canvas"></pre>
 ```
 
 #### MS-DOS
 
 ```html
-<pre id="retrotxtCanvas" class="retrotxt-msdos"></pre>
+<pre id="retrotxt-canvas" class="retrotxt-msdos"></pre>
 ```
 
 #### Amiga
 
 ```html
-<pre id="retrotxtCanvas" class="retrotxt-amiga"></pre>
+<pre id="retrotxt-canvas" class="retrotxt-amiga"></pre>
 ```
 
 #### Windows
 
 ```html
-<pre id="retrotxtCanvas" class="retrotxt-windows"></pre>
+<pre id="retrotxt-canvas" class="retrotxt-windows"></pre>
 ```
 
 ## Technical

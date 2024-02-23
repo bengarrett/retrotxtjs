@@ -23,7 +23,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
     unbsp = `\u00A0`;
 
   // pre is the text element.
-  const pre = document.getElementById(`retrotxtCanvas`);
+  const pre = document.getElementById(`retrotxt-canvas`);
   if (pre === null) return;
   if (pre.textContent.trim().length === 0) return;
 
@@ -52,7 +52,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
 
     links() {
       const p = document.createElement(`p`);
-      p.setAttribute(`id`, `retrotxtLinks`);
+      p.setAttribute(`id`, `retrotxt-links`);
       return p;
     }
 
@@ -145,7 +145,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
         }
       };
       const font = document.createElement(`a`),
-        p = document.getElementById(`retrotxtStatus`);
+        p = document.getElementById(`retrotxt-status`);
       while (p.firstChild) {
         p.removeChild(p.firstChild);
       }
@@ -175,7 +175,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
     }
 
     _activeLink(id = ``) {
-      const p = document.getElementById(`retrotxtLinks`);
+      const p = document.getElementById(`retrotxt-links`);
       const children = p.childNodes;
       children.forEach((item) => {
         if (item.id === optWrap) return;
@@ -259,7 +259,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
   parent.insertBefore(ui, pre);
 
   const info = document.createElement(`p`);
-  info.setAttribute(`id`, `retrotxtStatus`);
+  info.setAttribute(`id`, `retrotxt-status`);
   //parent.insertBefore(info, pre);
   parent.append(info);
 

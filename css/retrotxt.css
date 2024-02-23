@@ -44,11 +44,11 @@
   color: #fff;
 }
 
-#retrotxtLinks a.retrotxt-active {
+#retrotxt-links a.retrotxt-active {
   color: #fff;
 }
 
-#retrotxtLinks a {
+#retrotxt-links a {
   color: #5e5f5f;
   cursor: pointer;
   margin-left: 1em;
@@ -59,10 +59,10 @@
   user-select: none;
 }
 
-#retrotxtStatus {
+#retrotxt-status {
   font-size: 0.8em;
 }
 
-#retrotxtCanvas {
+#retrotxt-canvas {
   white-space: pre-wrap;
 }

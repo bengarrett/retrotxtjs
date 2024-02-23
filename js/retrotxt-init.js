@@ -22,7 +22,7 @@ window.onload = function () {
 
   if (!features) return;
   // Do an element id check here to avoid unnecessary fetching and loading of the main JS file.
-  var pre = document.getElementById("retrotxtCanvas");
+  var pre = document.getElementById("retrotxt-canvas");
   if (pre == null) return;
 
   var s = document.createElement("script");

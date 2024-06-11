@@ -173,7 +173,8 @@ export class LegacyText {
   _lookupRows8_9(number) {
     const i = this.win1252Table.indexOf(String.fromCodePoint(number)),
       offset = 128;
-    if (i === -1) return `${this.extendedTable[number - offset]}`;
+    const notFound = -1;
+    if (i === notFound) return `${this.extendedTable[number - offset]}`;
     return `${this.extendedTable[i]}`;
   }
 

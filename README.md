@@ -18,9 +18,7 @@ RetrotxtJS correctly displays legacy ASCII and NFO text on a modern UTF-8 HTML p
 
 ## Install
 
-```bash
-yarn add retrotxt
-# or
+```sh
 npm install retrotxt
 ```
 
@@ -94,9 +92,7 @@ RetrotxtJS uses ES6 modules, [so it requires a webserver](https://developer.mozi
 
 There is a collection of example HTML files with several preformatted texts that you can view in the browser.
 
-```bash
-yarn run serve
-# or
+```sh
 npm run-script serve
 
 # Starting up http-server, serving dist

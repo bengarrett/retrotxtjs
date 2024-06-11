@@ -22,14 +22,16 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
     styleWrap = `pre-wrap`,
     unbsp = `\u00A0`;
 
+  const none = 0;
+
   // pre is the text element.
   const pre = document.getElementById(`retrotxt-canvas`);
   if (pre === null) return;
-  if (pre.textContent.trim().length === 0) return;
+  if (pre.textContent.trim().length === none) return;
 
   // head is a HTML requirement to insert external CSS links.
   const head = document.getElementsByTagName(`head`);
-  if (head.length === 0) return;
+  if (head.length === none) return;
 
   // store an unmodified copy of the text.
   const original = pre.textContent;
@@ -205,24 +207,30 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
     }
 
     _wrapToggle(a) {
-      if (typeof a === `undefined`) a = document.getElementById(optWrap);
+      let elm = a;
+      if (typeof a === `undefined` || a === null)
+        elm = document.getElementById(optWrap);
       if (a.classList.contains(activefont)) {
-        return this._wrapOff(a, true);
+        return this._wrapOff(elm, true);
       }
-      this._wrapOn(a, true);
+      this._wrapOn(elm, true);
     }
 
     _wrapOff(a, store) {
-      if (typeof a === `undefined`) a = document.getElementById(optWrap);
+      let elm = a;
+      if (typeof a === `undefined` || a === null)
+        elm = document.getElementById(optWrap);
       pre.style.whiteSpace = `${stylePre}`;
-      a.classList.remove(activefont);
+      elm.classList.remove(activefont);
       if (store) localStorage.setItem(storeWrap, `false`);
     }
 
     _wrapOn(a, store) {
-      if (typeof a === `undefined`) a = document.getElementById(optWrap);
+      let elm = a;
+      if (typeof a === `undefined` || a === null)
+        elm = document.getElementById(optWrap);
       pre.style.whiteSpace = `${styleWrap}`;
-      a.classList.add(activefont);
+      elm.classList.add(activefont);
       if (store) localStorage.removeItem(storeWrap);
     }
 
@@ -244,7 +252,8 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
   const c = new Canvas();
 
   // apply CSS link
-  head[0].append(c.css());
+  const index = 0;
+  head[index].append(c.css());
 
   // create the 'View text as:' UI and links
   const ui = c.links();
@@ -264,7 +273,7 @@ import { LegacyText, DOS437En, ISO88591, Win1252EN } from "./module/text.js";
   parent.append(info);
 
   // implement saved wrap state, it is otherwise enabled by default
-  if (localStorage.getItem(storeWrap) === `false`) c._wrapOff(undefined, true);
+  if (localStorage.getItem(storeWrap) === `false`) c._wrapOff(null, true);
 
   // select the default view
   if (pre.classList.contains(`retrotxt-msdos`)) {

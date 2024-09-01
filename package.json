@@ -42,7 +42,7 @@
     "grunt-stylelint": "^0.20.0",
     "http-server": "^14.1.1",
     "prettier": "^3.3.1",
-    "qunit": "~2.21.0",
+    "qunit": "~2.22.0",
     "stylelint": "^16.6.1",
     "stylelint-config-idiomatic-order": "^10.0.0",
     "stylelint-config-standard": "^36.0.0",

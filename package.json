@@ -1,6 +1,6 @@
 {
   "name": "retrotxt",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "RetrotxtJS correctly displays legacy ASCII and NFO text on a modern UTF-8 HTML page.",
   "keywords": [
     "html",
@@ -28,24 +28,24 @@
     "url": "git+https://github.com/bengarrett/retrotxtjs.git"
   },
   "devDependencies": {
-    "eslint": "^9.4.0",
-    "globals": "^15.4.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "grunt": "~1.6.1",
     "grunt-banner": "^0.6.0",
     "grunt-contrib-clean": "^2.0.1",
     "grunt-contrib-connect": "^4.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^5.0.0",
-    "grunt-contrib-qunit": "^10.0.0",
+    "grunt-contrib-qunit": "^10.1.1",
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-eslint": "^25.0.0",
-    "grunt-stylelint": "^0.20.0",
+    "grunt-stylelint": "^0.20.1",
     "http-server": "^14.1.1",
-    "prettier": "^3.3.1",
+    "prettier": "^3.4.2",
     "qunit": "~2.23.1",
-    "stylelint": "^16.6.1",
+    "stylelint": "^16.12.0",
     "stylelint-config-idiomatic-order": "^10.0.0",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-order": "^6.0.4"
   },
   "scripts": {

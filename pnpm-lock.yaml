@@ -39,8 +39,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
       grunt-eslint:
-        specifier: ^25.0.0
-        version: 25.0.0(grunt@1.6.1)
+        specifier: ^26.0.0
+        version: 26.0.0(grunt@1.6.1)
       grunt-stylelint:
         specifier: ^0.20.1
         version: 0.20.1(stylelint@16.23.1)
@@ -876,9 +876,9 @@ packages:
     resolution: {integrity: sha512-ITxiWxrjjP+RZu/aJ5GLvdele+sxlznh+6fK9Qckio5ma8f7Iv8woZjRkGfafvpuygxNefOJNc+hfjjBayRn2Q==}
     engines: {node: '>=12'}
 
-  grunt-eslint@25.0.0:
-    resolution: {integrity: sha512-JIV5IPgOuacorFLmYtUTq0n+0qGIL9FSQJ4KVnNfCg/8Fm+K1t6OWrzXXI8TxWTwq2K9E3parFVXCpn1sGLbKQ==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+  grunt-eslint@26.0.0:
+    resolution: {integrity: sha512-HP/Mu00nBtdLDk0i1V1gLplYBgce4nBjxwmtpo3Eit/h5OUzGxEsgBxprkT4I5bN1x79w6wDnrN+7CX29OZatg==}
+    engines: {node: '>=20'}
     peerDependencies:
       grunt: '>=1'
 
@@ -2756,7 +2756,7 @@ snapshots:
       uglify-js: 3.19.3
       uri-path: 1.0.0
 
-  grunt-eslint@25.0.0(grunt@1.6.1):
+  grunt-eslint@26.0.0(grunt@1.6.1):
     dependencies:
       chalk: 4.1.2
       eslint: 9.34.0

@@ -39,7 +39,7 @@
     "grunt-contrib-qunit": "^10.1.1",
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-eslint": "^26.0.0",
-    "grunt-stylelint": "^0.20.1",
+    "grunt-stylelint": "^0.21.0",
     "http-server": "^14.1.1",
     "prettier": "^3.4.2",
     "qunit": "~2.25.0",

@@ -9,10 +9,10 @@ importers:
   .:
     devDependencies:
       eslint:
-        specifier: ^10.0.2
+        specifier: ^10.1.0
         version: 10.1.0
       globals:
-        specifier: ^17.3.0
+        specifier: ^17.4.0
         version: 17.4.0
       grunt:
         specifier: ~1.6.1
@@ -48,19 +48,19 @@ importers:
         specifier: ^14.1.1
         version: 14.1.1
       prettier:
-        specifier: ^3.4.2
+        specifier: ^3.8.1
         version: 3.8.1
       qunit:
         specifier: ~2.25.0
         version: 2.25.0
       stylelint:
-        specifier: ^16.12.0
+        specifier: ^16.26.1
         version: 16.26.1
       stylelint-config-idiomatic-order:
         specifier: ^10.0.0
         version: 10.0.0(stylelint@16.26.1)
       stylelint-config-standard:
-        specifier: ^39.0.0
+        specifier: ^39.0.1
         version: 39.0.1(stylelint@16.26.1)
       stylelint-order:
         specifier: ^8.1.1
@@ -367,7 +367,7 @@ packages:
   basic-ftp@5.0.5:
     resolution: {integrity: sha512-4Bcg1P8xhUuqcii/S0Z9wiHIrQVPMermM1any+MX5GeGD7faD3/msQUDGLol9wOcz4/jbg/WJnGqoJF6LiBdtg==}
     engines: {node: '>=10.0.0'}
-    deprecated: Security vulnerability fixed in 5.2.0, please upgrade
+    deprecated: Security vulnerability fixed in 5.2.1, please upgrade
 
   batch@0.6.1:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
@@ -1977,8 +1977,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  ws@8.18.0:
-    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+  ws@8.20.1:
+    resolution: {integrity: sha512-It4dO0K5v//JtTXuPkfEOaI3uUN87iYPnqo/ZzqCoG3g8uhA66QUMs/SrM0YK7/NAu+r4LMh/9dq2A7k+rHs+w==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -3578,7 +3578,7 @@ snapshots:
       chromium-bidi: 0.6.3(devtools-protocol@0.0.1312386)
       debug: 4.4.3
       devtools-protocol: 0.0.1312386
-      ws: 8.18.0
+      ws: 8.20.1
     transitivePeerDependencies:
       - bare-buffer
       - bufferutil
@@ -4066,7 +4066,7 @@ snapshots:
       safe-buffer: 5.1.2
       ultron: 1.1.1
 
-  ws@8.18.0: {}
+  ws@8.20.1: {}
 
   xtend@4.0.2: {}
 

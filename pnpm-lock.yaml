@@ -10,10 +10,10 @@ importers:
     devDependencies:
       eslint:
         specifier: ^10.0.2
-        version: 10.8.0
+        version: 10.9.1(supports-color@7.2.0)
       globals:
         specifier: ^17.3.0
-        version: 17.8.0
+        version: 17.11.0
       grunt:
         specifier: ~1.6.1
         version: 1.6.3
@@ -25,7 +25,7 @@ importers:
         version: 2.0.1(grunt@1.6.3)
       grunt-contrib-connect:
         specifier: ^4.0.0
-        version: 4.0.0
+        version: 4.0.0(supports-color@7.2.0)
       grunt-contrib-copy:
         specifier: ^1.0.0
         version: 1.0.0
@@ -34,19 +34,19 @@ importers:
         version: 5.0.0
       grunt-contrib-qunit:
         specifier: ^10.1.1
-        version: 10.2.0
+        version: 10.2.0(supports-color@7.2.0)
       grunt-contrib-uglify:
         specifier: ^5.2.2
         version: 5.2.2
       grunt-eslint:
         specifier: ^26.0.0
-        version: 26.0.0(grunt@1.6.3)
+        version: 26.0.0(grunt@1.6.3)(supports-color@7.2.0)
       grunt-stylelint:
         specifier: ^0.21.0
-        version: 0.21.0(stylelint@16.26.1)
+        version: 0.21.0(stylelint@16.26.1(supports-color@7.2.0))
       http-server:
         specifier: ^14.1.1
-        version: 14.1.1
+        version: 14.1.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)
       prettier:
         specifier: ^3.4.2
         version: 3.9.6
@@ -55,16 +55,16 @@ importers:
         version: 2.26.0
       stylelint:
         specifier: ^16.12.0
-        version: 16.26.1
+        version: 16.26.1(supports-color@7.2.0)
       stylelint-config-idiomatic-order:
         specifier: ^10.0.0
-        version: 10.0.0(stylelint@16.26.1)
+        version: 10.0.0(stylelint@16.26.1(supports-color@7.2.0))
       stylelint-config-standard:
         specifier: ^39.0.0
-        version: 39.0.1(stylelint@16.26.1)
+        version: 39.0.1(stylelint@16.26.1(supports-color@7.2.0))
       stylelint-order:
         specifier: ^8.1.1
-        version: 8.1.1(stylelint@16.26.1)
+        version: 8.1.1(stylelint@16.26.1(supports-color@7.2.0))
 
 packages:
 
@@ -660,8 +660,8 @@ packages:
     resolution: {integrity: sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  eslint@10.8.0:
-    resolution: {integrity: sha512-nuKKvN+oIBO0koN7Tm7dlkmnkc21mtt0QJLwAKzjLq14y6lRTdVG36MZHJ8eQHwdJMwZbQNMlPOYedMq/oVJvQ==}
+  eslint@10.9.1:
+    resolution: {integrity: sha512-9VaAkDURekixUQJy0oJYl2DcN6oKMfxay7XzaGYAWQwsb6qfKf+x76R2k1L8kb1boc+FyCAaTA9GmiKaaiaF+A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     hasBin: true
     peerDependencies:
@@ -673,6 +673,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -916,8 +917,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@17.8.0:
-    resolution: {integrity: sha512-Zz/LMDZScFmkakeL2cTHzf+PbWKdpU3uclqkZT7TjDG58j5WPt0PpA+n9uPI24fZtlw07q0OtEi84K+umsRzqQ==}
+  globals@17.11.0:
+    resolution: {integrity: sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw==}
     engines: {node: '>=18'}
 
   globalyzer@0.1.0:
@@ -2054,30 +2055,30 @@ snapshots:
 
   '@dual-bundle/import-meta-resolve@4.2.1': {}
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@10.8.0)':
+  '@eslint-community/eslint-utils@4.10.1(eslint@10.9.1(supports-color@7.2.0))':
     dependencies:
-      eslint: 10.8.0
+      eslint: 10.9.1(supports-color@7.2.0)
       eslint-visitor-keys: 3.4.3
 
-  '@eslint-community/eslint-utils@4.10.1(eslint@9.39.5)':
+  '@eslint-community/eslint-utils@4.10.1(eslint@9.39.5(supports-color@7.2.0))':
     dependencies:
-      eslint: 9.39.5
+      eslint: 9.39.5(supports-color@7.2.0)
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/config-array@0.21.2':
+  '@eslint/config-array@0.21.2(supports-color@7.2.0)':
     dependencies:
       '@eslint/object-schema': 2.1.7
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       minimatch: 3.1.5
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint/config-array@0.23.5':
+  '@eslint/config-array@0.23.5(supports-color@7.2.0)':
     dependencies:
       '@eslint/object-schema': 3.0.5
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       minimatch: 10.2.6
     transitivePeerDependencies:
       - supports-color
@@ -2098,10 +2099,10 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/eslintrc@3.3.6':
+  '@eslint/eslintrc@3.3.6(supports-color@7.2.0)':
     dependencies:
       ajv: 6.15.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       espree: 10.4.0
       globals: 14.0.0
       ignore: 5.3.2
@@ -2164,12 +2165,12 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@puppeteer/browsers@2.13.2':
+  '@puppeteer/browsers@2.13.2(supports-color@7.2.0)':
     dependencies:
-      debug: 4.4.3
-      extract-zip: 2.0.1
+      debug: 4.4.3(supports-color@7.2.0)
+      extract-zip: 2.0.1(supports-color@7.2.0)
       progress: 2.0.3
-      proxy-agent: 6.5.0
+      proxy-agent: 6.5.0(supports-color@7.2.0)
       semver: 7.8.1
       tar-fs: 3.1.2
       yargs: 17.7.2
@@ -2394,10 +2395,10 @@ snapshots:
 
   connect-livereload@0.6.1: {}
 
-  connect@3.7.0:
+  connect@3.7.0(supports-color@7.2.0):
     dependencies:
-      debug: 2.6.9
-      finalhandler: 1.1.2
+      debug: 2.6.9(supports-color@7.2.0)
+      finalhandler: 1.1.2(supports-color@7.2.0)
       parseurl: 1.3.3
       utils-merge: 1.0.1
     transitivePeerDependencies:
@@ -2440,17 +2441,23 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@7.2.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@3.2.7:
+  debug@3.2.7(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   deep-is@0.1.4: {}
 
@@ -2555,11 +2562,11 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@10.8.0:
+  eslint@10.9.1(supports-color@7.2.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.8.0)
+      '@eslint-community/eslint-utils': 4.10.1(eslint@10.9.1(supports-color@7.2.0))
       '@eslint-community/regexpp': 4.12.2
-      '@eslint/config-array': 0.23.5
+      '@eslint/config-array': 0.23.5(supports-color@7.2.0)
       '@eslint/config-helpers': 0.7.0
       '@eslint/core': 1.2.1
       '@eslint/plugin-kit': 0.7.2
@@ -2569,7 +2576,7 @@ snapshots:
       '@types/estree': 1.0.9
       ajv: 6.15.0
       cross-spawn: 7.0.6
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 9.1.2
       eslint-visitor-keys: 5.0.1
@@ -2590,14 +2597,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint@9.39.5:
+  eslint@9.39.5(supports-color@7.2.0):
     dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@9.39.5)
+      '@eslint-community/eslint-utils': 4.10.1(eslint@9.39.5(supports-color@7.2.0))
       '@eslint-community/regexpp': 4.12.2
-      '@eslint/config-array': 0.21.2
+      '@eslint/config-array': 0.21.2(supports-color@7.2.0)
       '@eslint/config-helpers': 0.4.2
       '@eslint/core': 0.17.0
-      '@eslint/eslintrc': 3.3.6
+      '@eslint/eslintrc': 3.3.6(supports-color@7.2.0)
       '@eslint/js': 9.39.5
       '@eslint/plugin-kit': 0.4.1
       '@humanfs/node': 0.16.8
@@ -2607,7 +2614,7 @@ snapshots:
       ajv: 6.15.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       escape-string-regexp: 4.0.0
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
@@ -2681,9 +2688,9 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -2737,9 +2744,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.1.2:
+  finalhandler@1.1.2(supports-color@7.2.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       encodeurl: 1.0.2
       escape-html: 1.0.3
       on-finished: 2.3.0
@@ -2793,7 +2800,9 @@ snapshots:
 
   flatted@3.4.4: {}
 
-  follow-redirects@1.15.9: {}
+  follow-redirects@1.15.9(debug@4.4.3(supports-color@7.2.0)):
+    optionalDependencies:
+      debug: 4.4.3(supports-color@7.2.0)
 
   for-in@1.0.2: {}
 
@@ -2826,11 +2835,11 @@ snapshots:
     dependencies:
       pump: 3.0.4
 
-  get-uri@6.0.5:
+  get-uri@6.0.5(supports-color@7.2.0):
     dependencies:
       basic-ftp: 5.3.1
       data-uri-to-buffer: 6.0.2
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2888,7 +2897,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@17.8.0: {}
+  globals@17.11.0: {}
 
   globalyzer@0.1.0: {}
 
@@ -2926,17 +2935,17 @@ snapshots:
       grunt: 1.6.3
       rimraf: 2.7.1
 
-  grunt-contrib-connect@4.0.0:
+  grunt-contrib-connect@4.0.0(supports-color@7.2.0):
     dependencies:
       async: 3.2.6
-      connect: 3.7.0
+      connect: 3.7.0(supports-color@7.2.0)
       connect-livereload: 0.6.1
-      morgan: 1.10.0
+      morgan: 1.10.0(supports-color@7.2.0)
       node-http2: 4.0.1
       open: 8.4.2
       portscanner: 2.2.0
-      serve-index: 1.9.1
-      serve-static: 1.16.2
+      serve-index: 1.9.1(supports-color@7.2.0)
+      serve-static: 1.16.2(supports-color@7.2.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -2953,10 +2962,10 @@ snapshots:
       clean-css: 5.3.3
       maxmin: 3.0.0
 
-  grunt-contrib-qunit@10.2.0:
+  grunt-contrib-qunit@10.2.0(supports-color@7.2.0):
     dependencies:
       eventemitter2: 6.4.9
-      puppeteer: 24.43.1
+      puppeteer: 24.43.1(supports-color@7.2.0)
     transitivePeerDependencies:
       - bare-abort-controller
       - bare-buffer
@@ -2973,10 +2982,10 @@ snapshots:
       uglify-js: 3.19.3
       uri-path: 1.0.0
 
-  grunt-eslint@26.0.0(grunt@1.6.3):
+  grunt-eslint@26.0.0(grunt@1.6.3)(supports-color@7.2.0):
     dependencies:
       chalk: 4.1.2
-      eslint: 9.39.5
+      eslint: 9.39.5(supports-color@7.2.0)
       grunt: 1.6.3
     transitivePeerDependencies:
       - jiti
@@ -3005,10 +3014,10 @@ snapshots:
       underscore.string: 3.3.6
       which: 2.0.2
 
-  grunt-stylelint@0.21.0(stylelint@16.26.1):
+  grunt-stylelint@0.21.0(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
       chalk: 4.1.2
-      stylelint: 16.26.1
+      stylelint: 16.26.1(supports-color@7.2.0)
 
   grunt@1.6.3:
     dependencies:
@@ -3078,33 +3087,33 @@ snapshots:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
-  http-proxy-agent@7.0.2:
+  http-proxy-agent@7.0.2(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  http-proxy@1.18.1:
+  http-proxy@1.18.1(debug@4.4.3(supports-color@7.2.0)):
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.15.9
+      follow-redirects: 1.15.9(debug@4.4.3(supports-color@7.2.0))
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
 
-  http-server@14.1.1:
+  http-server@14.1.1(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0):
     dependencies:
       basic-auth: 2.0.1
       chalk: 4.1.2
       corser: 2.0.1
       he: 1.2.0
       html-encoding-sniffer: 3.0.0
-      http-proxy: 1.18.1
+      http-proxy: 1.18.1(debug@4.4.3(supports-color@7.2.0))
       mime: 1.6.0
       minimist: 1.2.8
       opener: 1.5.2
-      portfinder: 1.0.32
+      portfinder: 1.0.32(supports-color@7.2.0)
       secure-compare: 3.0.1
       union: 0.5.0
       url-join: 4.0.1
@@ -3114,10 +3123,10 @@ snapshots:
 
   https-browserify@0.0.1: {}
 
-  https-proxy-agent@7.0.6:
+  https-proxy-agent@7.0.6(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3323,10 +3332,10 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  morgan@1.10.0:
+  morgan@1.10.0(supports-color@7.2.0):
     dependencies:
       basic-auth: 2.0.1
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       depd: 2.0.0
       on-finished: 2.3.0
       on-headers: 1.0.2
@@ -3424,16 +3433,16 @@ snapshots:
     dependencies:
       p-limit: 3.1.0
 
-  pac-proxy-agent@7.2.0:
+  pac-proxy-agent@7.2.0(supports-color@7.2.0):
     dependencies:
       '@tootallnate/quickjs-emscripten': 0.23.0
       agent-base: 7.1.4
-      debug: 4.4.3
-      get-uri: 6.0.5
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      debug: 4.4.3(supports-color@7.2.0)
+      get-uri: 6.0.5(supports-color@7.2.0)
+      http-proxy-agent: 7.0.2(supports-color@7.2.0)
+      https-proxy-agent: 7.0.6(supports-color@7.2.0)
       pac-resolver: 7.0.1
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3487,10 +3496,10 @@ snapshots:
 
   pify@4.0.1: {}
 
-  portfinder@1.0.32:
+  portfinder@1.0.32(supports-color@7.2.0):
     dependencies:
       async: 2.6.4
-      debug: 3.2.7
+      debug: 3.2.7(supports-color@7.2.0)
       mkdirp: 0.5.6
     transitivePeerDependencies:
       - supports-color
@@ -3543,16 +3552,16 @@ snapshots:
 
   progress@2.0.3: {}
 
-  proxy-agent@6.5.0:
+  proxy-agent@6.5.0(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
-      http-proxy-agent: 7.0.2
-      https-proxy-agent: 7.0.6
+      debug: 4.4.3(supports-color@7.2.0)
+      http-proxy-agent: 7.0.2(supports-color@7.2.0)
+      https-proxy-agent: 7.0.6(supports-color@7.2.0)
       lru-cache: 7.18.3
-      pac-proxy-agent: 7.2.0
+      pac-proxy-agent: 7.2.0(supports-color@7.2.0)
       proxy-from-env: 1.1.0
-      socks-proxy-agent: 8.0.5
+      socks-proxy-agent: 8.0.5(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3567,11 +3576,11 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  puppeteer-core@24.43.1:
+  puppeteer-core@24.43.1(supports-color@7.2.0):
     dependencies:
-      '@puppeteer/browsers': 2.13.2
+      '@puppeteer/browsers': 2.13.2(supports-color@7.2.0)
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1608973)
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       devtools-protocol: 0.0.1608973
       typed-query-selector: 2.12.2
       webdriver-bidi-protocol: 0.4.1
@@ -3584,13 +3593,13 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  puppeteer@24.43.1:
+  puppeteer@24.43.1(supports-color@7.2.0):
     dependencies:
-      '@puppeteer/browsers': 2.13.2
+      '@puppeteer/browsers': 2.13.2(supports-color@7.2.0)
       chromium-bidi: 14.0.0(devtools-protocol@0.0.1608973)
       cosmiconfig: 9.0.1
       devtools-protocol: 0.0.1608973
-      puppeteer-core: 24.43.1
+      puppeteer-core: 24.43.1(supports-color@7.2.0)
       typed-query-selector: 2.12.2
     transitivePeerDependencies:
       - bare-abort-controller
@@ -3675,9 +3684,9 @@ snapshots:
 
   semver@7.8.1: {}
 
-  send@0.19.0:
+  send@0.19.0(supports-color@7.2.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -3693,11 +3702,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-index@1.9.1:
+  serve-index@1.9.1(supports-color@7.2.0):
     dependencies:
       accepts: 1.3.8
       batch: 0.6.1
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@7.2.0)
       escape-html: 1.0.3
       http-errors: 1.6.3
       mime-types: 2.1.35
@@ -3705,12 +3714,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.2:
+  serve-static@1.16.2(supports-color@7.2.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.0
+      send: 0.19.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3766,10 +3775,10 @@ snapshots:
 
   smart-buffer@4.2.0: {}
 
-  socks-proxy-agent@8.0.5:
+  socks-proxy-agent@8.0.5(supports-color@7.2.0):
     dependencies:
       agent-base: 7.1.4
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       socks: 2.8.9
     transitivePeerDependencies:
       - supports-color
@@ -3827,33 +3836,33 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  stylelint-config-idiomatic-order@10.0.0(stylelint@16.26.1):
+  stylelint-config-idiomatic-order@10.0.0(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
-      stylelint: 16.26.1
-      stylelint-order: 6.0.4(stylelint@16.26.1)
+      stylelint: 16.26.1(supports-color@7.2.0)
+      stylelint-order: 6.0.4(stylelint@16.26.1(supports-color@7.2.0))
 
-  stylelint-config-recommended@17.0.0(stylelint@16.26.1):
+  stylelint-config-recommended@17.0.0(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
-      stylelint: 16.26.1
+      stylelint: 16.26.1(supports-color@7.2.0)
 
-  stylelint-config-standard@39.0.1(stylelint@16.26.1):
+  stylelint-config-standard@39.0.1(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
-      stylelint: 16.26.1
-      stylelint-config-recommended: 17.0.0(stylelint@16.26.1)
+      stylelint: 16.26.1(supports-color@7.2.0)
+      stylelint-config-recommended: 17.0.0(stylelint@16.26.1(supports-color@7.2.0))
 
-  stylelint-order@6.0.4(stylelint@16.26.1):
+  stylelint-order@6.0.4(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
       postcss: 8.5.8
       postcss-sorting: 8.0.2(postcss@8.5.8)
-      stylelint: 16.26.1
+      stylelint: 16.26.1(supports-color@7.2.0)
 
-  stylelint-order@8.1.1(stylelint@16.26.1):
+  stylelint-order@8.1.1(stylelint@16.26.1(supports-color@7.2.0)):
     dependencies:
       postcss: 8.5.8
       postcss-sorting: 10.0.0(postcss@8.5.8)
-      stylelint: 16.26.1
+      stylelint: 16.26.1(supports-color@7.2.0)
 
-  stylelint@16.26.1:
+  stylelint@16.26.1(supports-color@7.2.0):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-syntax-patches-for-csstree': 1.0.20
@@ -3866,7 +3875,7 @@ snapshots:
       cosmiconfig: 9.0.0
       css-functions-list: 3.2.3
       css-tree: 3.1.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       fast-glob: 3.3.3
       fastest-levenshtein: 1.0.16
       file-entry-cache: 11.1.1

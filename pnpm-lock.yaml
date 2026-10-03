@@ -51,8 +51,8 @@ importers:
         specifier: ^3.4.2
         version: 3.9.9
       qunit:
-        specifier: ~2.26.0
-        version: 2.26.0
+        specifier: ~3.0.0
+        version: 3.0.0
       stylelint:
         specifier: ^16.12.0
         version: 16.26.1(supports-color@7.2.0)
@@ -440,9 +440,9 @@ packages:
     resolution: {integrity: sha512-ENwblkFQpqqia6b++zLD/KUWafYlVY/UNnAp7oz7LY7E924wmpye416wBOmvv/HMWzl8gL1kJlfvId/1Dg176w==}
     engines: {node: '>=0.1.90'}
 
-  commander@7.2.0:
-    resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
-    engines: {node: '>= 10'}
+  commander@12.1.0:
+    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+    engines: {node: '>=18'}
 
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -1321,8 +1321,8 @@ packages:
     resolution: {integrity: sha512-AP21BjQsOAMTCJCCkdXUUMa1o7/Qx+yAWHnHZbCf8RhZ+hKMjB9rUkAtnfayk/yGj1qapZ5eBHZJBpk1dqdNlw==}
     engines: {node: '>=0.12.0'}
 
-  node-watch@0.7.3:
-    resolution: {integrity: sha512-3l4E8uMPY1HdMMryPRUAl+oIHtXtyiTlIiESNSVSNxcPfzAFzeTbXFQkZfAwBbo0B1qMSG8nUABx+Gd+YrbKrQ==}
+  node-watch@0.7.4:
+    resolution: {integrity: sha512-RinNxoz4W1cep1b928fuFhvAQ5ag/+1UlMDV7rbyGthBIgsiEouS4kvRayvvboxii4m8eolKOIBo3OjDqbc+uQ==}
     engines: {node: '>=6'}
 
   nopt@5.0.0:
@@ -1557,9 +1557,9 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  qunit@2.26.0:
-    resolution: {integrity: sha512-KSv16YomcYmiK90qTOJl3Bm5IvTf2upqQDdBQWCvSQWe94FWobnUgKOpvpvZdG7VkDt3TJSI8k8g9+GGGEd7Fw==}
-    engines: {node: '>=10'}
+  qunit@3.0.0:
+    resolution: {integrity: sha512-g4Fgw3uhqwdjzhUDa0bYGQyGzs1xRcIY/32c5zUydnnrgzcA8updYF9nIeUis+PfwuqX6UB/4JpCNMnrVBY6iA==}
+    engines: {node: '>=18'}
     hasBin: true
 
   range-parser@1.2.1:
@@ -2336,7 +2336,7 @@ snapshots:
 
   colors@1.1.2: {}
 
-  commander@7.2.0: {}
+  commander@12.1.0: {}
 
   concat-map@0.0.1: {}
 
@@ -3262,7 +3262,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  node-watch@0.7.3: {}
+  node-watch@0.7.4: {}
 
   nopt@5.0.0:
     dependencies:
@@ -3518,10 +3518,10 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  qunit@2.26.0:
+  qunit@3.0.0:
     dependencies:
-      commander: 7.2.0
-      node-watch: 0.7.3
+      commander: 12.1.0
+      node-watch: 0.7.4
       tiny-glob: 0.2.9
 
   range-parser@1.2.1: {}
